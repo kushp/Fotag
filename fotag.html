@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Fotag</title>
+
+    <!--
+    All of your CSS must go in css/fotag.css. Do not add styles to individual elements.
+    All of your CSS must be your own -- you may not use third-party CSS, like Bootstrap.
+    -->
+    <link rel="stylesheet" href="css/fotag.css"/>
+</head>
+<body>
+
+<div id="app-container">
+    <!--
+         An attachment point to place all of your dynamically created content. Do not remove or
+         rename this div.
+    -->
+</div>
+
+<!-- A template for a file chooser, to select multiple files. See FileChooser in view.js. -->
+<template id="file-chooser">
+    <input type="file" class="files-input" name="file_results[]" multiple />
+    <output id="list"></output>
+</template>
+
+<!-- A template for toolbar, for tooling purposes. See Toolbar in view.js. -->
+<template id="toolbar">
+    <span class="icon-table2 active"></span>
+    <span class="icon-list"></span>
+    <span class="toolbar-brand">Fotag</span>
+    <span class="file-chooser-container"></span>
+    <span class="ratingFilter">
+        Filter by:
+        <span class="rating-filter">
+            <span class="rating">
+            <input type="radio" id="rating-input-1-5" class="rating-input" name="rating-input-1" value="5">
+            <label for="rating-input-1-5" class="rating-star">★</label>
+            <input type="radio" id="rating-input-1-4" class="rating-input" name="rating-input-1" value="4">
+            <label for="rating-input-1-4" class="rating-star">★</label>
+            <input type="radio" id="rating-input-1-3" class="rating-input" name="rating-input-1" value="3">
+            <label for="rating-input-1-3" class="rating-star">★</label>
+            <input type="radio" id="rating-input-1-2" class="rating-input" name="rating-input-1" value="2">
+            <label for="rating-input-1-2" class="rating-star">★</label>
+            <input type="radio" id="rating-input-1-1" class="rating-input" name="rating-input-1" value="1">
+            <label for="rating-input-1-1" class="rating-star">★</label>
+            <div class="clear"></div>
+                </span>
+        </span>
+    </span>
+    <div class="clear"></div>
+</template>
+
+<!-- A template for image model element, See ImageRenderer in view.js -->
+<template id="imageModelTemplate">
+    <img class="image" />
+    <div class="info">
+        <div class="caption"></div>
+        <span class="dateModified"></span>
+        <span class="rating"></span>
+    </div>
+    <div class="clear"></div>
+</template>
+
+<!-- A template for image popups, See ImagePopup in view.js -->
+<template id="popupTemplate">
+    <div class="icon-cross popupExit"></div>
+    <img class="popupImage" />
+</template>
+
+<!-- A template for image model ratings -->
+<template id="ratingTemplate">
+    <input type="radio" class="rating-input" value="5">
+    <label class="rating-star"></label>
+    <input type="radio" class="rating-input" value="4">
+    <label class="rating-star"></label>
+    <input type="radio" class="rating-input" value="3">
+    <label class="rating-star"></label>
+    <input type="radio" class="rating-input" value="2">
+    <label class="rating-star"></label>
+    <input type="radio" class="rating-input" value="1">
+    <label class="rating-star"></label>
+</template>
+
+<!-- Keep this here so TAs can run your unit tests -->
+<div id="unit-tests">
+    <!-- This button is for marking purposes to test your architecture. Do not remove it-->
+    <button class="marking-button">Mark Me!</button>
+    <a href="unit_tests.html">Run Unit Tests</a>
+</div>
+
+<script src="js/ext/underscore.js"></script>
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/fotag.js"></script>
+<script src="js/markers_code.js"></script>
+</body>
+</html>

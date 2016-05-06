@@ -1,0 +1,293 @@
+/* Put any additional CSS here */
+
+/* Open Sans Font */
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/OpenSans-Regular-webfont.eot');
+    src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+    url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+    url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansextrabold';
+    src: url('../fonts/OpenSans-ExtraBold-webfont.eot');
+    src: url('../fonts/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-ExtraBold-webfont.woff') format('woff'),
+    url('../fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype'),
+    url('../fonts/OpenSans-ExtraBold-webfont.svg#open_sansextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* End Open Sans Font */
+
+body {
+    font-family: 'open_sansregular';
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.appContainer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #3a5795;
+    color: white;
+}
+
+.ratingFilter {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Rating from http://everythingfrontend.com/posts/star-rating-input-pure-css.html */
+.rating {
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    position: relative;
+}
+
+.rating-input {
+    float: right;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0 0 0 -16px;
+    opacity: 0;
+}
+
+.rating:hover .rating-star:hover,
+.rating:hover .rating-star:hover ~ .rating-star,
+.rating-input:checked ~ .rating-star {
+    background-position: 0 0;
+}
+
+.rating-star,
+.rating:hover .rating-star {
+    position: relative;
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('http://kubyshkin.ru/samples/star-rating/star.png') 0 -16px;
+}
+/* End Rating*/
+
+/* Thank you IcoMoon */
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot?-ypf6v5');
+    src:url('../fonts/icomoon.eot?#iefix-ypf6v5') format('embedded-opentype'),
+    url('../fonts/icomoon.woff?-ypf6v5') format('woff'),
+    url('../fonts/icomoon.ttf?-ypf6v5') format('truetype'),
+    url('../fonts/icomoon.svg?-ypf6v5#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-list {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.icon-list:before {
+    content: "\e9ba";
+}
+
+.icon-cross {
+    cursor: pointer;
+}
+
+.icon-cross:before {
+    content: "\ea0f";
+}
+
+.icon-table2 {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.icon-table2:before {
+    content: "\ea71";
+}
+
+.toolbar-brand {
+    font-family: 'open_sansextrabold';
+    margin-left: 10px;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-table2:not(.active):hover {
+    background-color:rgba(255, 255, 255, 0.4);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.icon-list:not(.active):hover {
+    background-color:rgba(255, 255, 255, 0.4);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* active icon grid view/list view*/
+.active {
+    background-color:rgba(255, 255, 255, 0.4);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.spacer {
+    margin-top: 50px;
+}
+
+/* Grid View Stuff */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid > div {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+
+.grid > div > img {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+}
+
+.grid > div > span {
+    display: inline-block;
+}
+
+/* List View Stuff */
+.list {
+    display: flex;
+    flex-flow: column;
+}
+
+.list > div {
+    width: 400px;
+    height: 300px;
+}
+
+.list > div > img {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.imagePopup {
+    position: fixed;
+    background-color: black;
+    border-radius: 5px;
+    width: 98%;
+    height: 98%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popupImage {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popupExit {
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 22px;
+    z-index: 9999;                    /* May have to go over image if image is too big */
+    text-shadow: 2px 2px 4px black;   /* Just in case image has white background */
+    color: white;
+}
+
+.popupExit:hover {
+    font-size: 28px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3a5795;
+    text-decoration: underline;
+}
+
+button {
+    padding: 10px;
+    color: white;
+    background-color: #3a5795;
+    border-radius: 5px;
+}
+
+.unit-tests {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.marking-button {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.footer {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.file-chooser-container > div {
+    display: inline;
+}
+
+.file-chooser-container > div > input {
+    /* hacky way to get rid of the text saying no files selected :( */
+    width: 94px;
+    over-flow: hidden;
+}

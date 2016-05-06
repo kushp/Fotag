@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mocha</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ext/mocha.css" />
+  </head>
+  <body>
+
+
+
+  <!-- You shouldn't need to change anything in this file -->
+
+
+
+    <div id="mocha"></div>
+
+    <script src="js/ext/underscore.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/fotag.js"></script>
+    <script src="js/ext/chai.js"></script>
+    <script src="js/ext/sinon.js"></script>
+    <script src="js/ext/sinon-chai.js"></script>
+    <script src="js/ext/mocha.js"></script>
+    <script>
+      mocha.setup('bdd');
+    </script>
+    <script src="js/unit_tests/provided_unit_tests.js"></script>
+    <script src="js/unit_tests/marking_unit_tests.js"></script>
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>
